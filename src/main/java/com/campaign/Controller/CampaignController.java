@@ -18,12 +18,13 @@ public class CampaignController {
     @Autowired
     private CampaignRepository campaignRepository;
 
+    @Autowired
     private CampaignService campaignService;
 
     @PostMapping
     public ResponseEntity<Campaign> addCampaign(@RequestBody Campaign campaign) {
         Campaign newCampaign = campaignService.addCampaign(campaign);
-        return new ResponseEntity<>(campaign, HttpStatus.CREATED);
+        return new ResponseEntity<>(newCampaign, HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -38,13 +39,13 @@ public class CampaignController {
         return new ResponseEntity<>(campaign, HttpStatus.OK);
     }
 
-    @DeleteMapping("/campaignId")
+    @DeleteMapping("/{campaignId}")
     public ResponseEntity<Campaign> deleteCampaign(@PathVariable Long campaignId) {
         Campaign campaign = campaignService.deleteCampaign(campaignId);
         return new ResponseEntity<>(campaign, HttpStatus.OK);
     }
 
-    @PutMapping("/{campaignId")
+    @PutMapping("/{campaignId}")
     public ResponseEntity<Campaign> updateCampaign(@PathVariable Long campaignId, @RequestBody CampaignDTO campaignDTO) {
         Campaign campaign = campaignService.updateCampaign(campaignId, campaignDTO);
         return new ResponseEntity<>(campaign, HttpStatus.OK);
