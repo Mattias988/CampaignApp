@@ -1,8 +1,6 @@
 package com.campaign.Entity;
 
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
@@ -18,7 +16,7 @@ import java.util.List;
 public class Campaign {
 
     @Id
-    @Generated
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long campaignId;
 
     @NotBlank(message = "Campaign name cannot be blank!")
