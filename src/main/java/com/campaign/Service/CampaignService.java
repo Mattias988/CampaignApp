@@ -47,6 +47,7 @@ public class CampaignService {
         campaign.setTown(campaignDTO.getTown());
         campaign.setStatus(campaignDTO.getStatus());
         campaign.setKeywords(campaignDTO.getKeywords());
-        return null;
+
+        return campaignRepository.save(campaign);
     }
 }
