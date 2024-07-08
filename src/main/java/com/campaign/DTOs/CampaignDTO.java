@@ -20,12 +20,12 @@ public class CampaignDTO {
     private List<@Pattern(regexp = "^[A-Za-z]+$", message = "Keywords must contain only letters") String> keywords;
 
     @NotNull(message = "Bid amount must be higher than zero!")
-    @Min(value = 0, message = "Bid amount must be higher than zero")
+    @Min(value = 1, message = "Bid amount must be higher than zero")
     @Max(value = 1000000, message = "Bid amount must not exceed 1,000,000")
     private Long bidAmount;
 
     @NotNull(message = "Campaign fund must be higher than zero")
-    @Min(value = 0, message = "Campaign fund must be higher than zero")
+    @Min(value = 1, message = "Campaign fund must be higher than zero")
     @Max(value = 1000000, message = "Campaign fund must not exceed 1,000,000")
     private Long campaignFund;
 
