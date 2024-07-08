@@ -25,13 +25,13 @@ const CampaignCard = ({ campaign, onDelete, onEdit }) => {
       <div className="flex space-x-2 mt-4">
         <button 
           onClick={() => onEdit(campaign)} 
-          className="bg-yellow-600 text-white px-4 py-2 rounded"
+          className="bg-yellow-600 text-white px-4 py-2 rounded hover:scale-110"
         >
           <img src='/edit.svg' alt='Edit campaign' width="24px" height="24px" className=''/>
         </button>
         <button 
           onClick={handleDeleteClick} 
-          className="bg-red-600 text-white px-4 py-2 rounded"
+          className="bg-red-600 text-white px-4 py-2 rounded hover:scale-110"
         >
           <img src='/delete.svg' alt='Delete campaign' width="24px" height="24px" />
         </button>

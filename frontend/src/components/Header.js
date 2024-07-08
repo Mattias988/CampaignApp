@@ -4,7 +4,7 @@ import SearchBar from './SearchBar';
 const Header = ({ onAddCampaign, searchQuery, setSearchQuery }) => {
   return (
     <header className="bg-gradient-to-r from-blue-300 to-blue-800 p-4 text-white flex flex-col md:flex-row justify-between items-center shadow-xl">
-        <div className="flex flex-col md:flex-row items-center sm:w-auto md:w-72 shadow-lg">
+        <div className="flex flex-col md:flex-row items-center sm:w-auto md:w-72 shadow-lg ">
             <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
         </div>
         <div className=''>
@@ -12,7 +12,7 @@ const Header = ({ onAddCampaign, searchQuery, setSearchQuery }) => {
         </div>
         <button 
             onClick={onAddCampaign} 
-            className="bg-white text-blue-600 px-4 py-2 rounded mt-4 md:mt-0 shadow-lg"
+            className="bg-white text-blue-600 px-4 py-2 rounded mt-4 md:mt-0 shadow-lg hover:scale-110"
         >
             Add Campaign
         </button>
