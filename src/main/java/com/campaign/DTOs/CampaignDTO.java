@@ -29,7 +29,6 @@ public class CampaignDTO {
     @Max(value = 1000000, message = "Campaign fund must not exceed 1,000,000")
     private Long campaignFund;
 
-    @NotNull(message = "Status cannot be null")
     private Boolean status;
 
     @NotBlank(message = "Town cannot be blank")
