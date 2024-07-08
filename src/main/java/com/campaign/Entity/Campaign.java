@@ -28,7 +28,7 @@ public class Campaign {
 
     @ElementCollection
     @NotNull(message = "Keywords cannot be null")
-    @Size(max = 10, message = "Keywords cannot contain more than 10 words")
+    @Size(min = 1, max = 10, message = "Keywords cannot contain more than 10 words")
     private List<@Pattern(regexp = "^[A-Za-z]+$", message = "Keywords must contain only letters") String> keywords;
 
     @NotNull(message = "Bid amount must be higher than zero!")
